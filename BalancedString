@@ -1,0 +1,33 @@
+/*
+
+Write a Regext to  Check if a Sting in Balanced in the below given condition.
+
+a. String is Composed of a,b,c,d.
+b.sum of occurence of a and c is even
+c.sum of occurence of b and d is even
+
+*/
+
+regex = "(?=^(([ac]*[bd]){2})*[ac]*$)(([bd]*[ac]){2})*[bd]*"
+
+
+Credit:-
+https://stackoverflow.com/questions/51784325/balanced-string-regular-exression
+
+
+For the first condition. The sum of a and c is even, which means you can match the pairs of ac, aa, ca and cc.
+
+Using regex it is written as   ----  ([ac]{2})*
+
+Since there are other characters in those a and c, so it becomes ----- (([^ac]*[ac]){2})*[^ac]*
+
+And same for the second condition    ------   (([^bd]*[ac]){2})*[^bd]*
+
+Because the input string should contain only a,b,c,d, so [^ac] should be [bd], [^bd] should be [ac].
+
+cond1 = "(([bd]*[ac]){2})*[bd]*";
+cond2 = "(([ac]*[bd]){2})*[ac]*";
+input = "abcdabcd";
+matches = Pattern.matches(cond1, input) && Pattern.matches(cond2, input);
+
+ regex = "(?=^(([ac]*[bd]){2})*[ac]*$)(([bd]*[ac]){2})*[bd]*";
