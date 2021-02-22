@@ -15,6 +15,9 @@ Segments [P..Q] from a hill or valley if all the following conditions are satisf
  There are two hills: [3..3] and [11..11] . There are two valleys : [0..1] and [ 8..9].
  Write Function :
  """
+
+#Ideation of Hill     -- A < B < C
+#Ideation of Valley   -- A > B <= C < D
  
 def solution(arr):
     # Declaring Variables
