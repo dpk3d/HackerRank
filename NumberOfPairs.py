@@ -19,7 +19,7 @@ arr1 = [2, 1, 6]
 arr2 = [1, 5]
 print("Number of Pairs count ==>", simpleApproach(arr1, 3, arr2, 2))
 
-# Need to work on this, This will handle corner cases and execptions
+## TODO : Need to work on this to handle exception and corner cases
 def binarySearchToGetIndex(arr, n, element):
     low = 0
     high = n - 1
