@@ -7,8 +7,10 @@ def reverseArrayInGroups(arr, N, K):
     initial = 0
     while initial < N:
         left = initial
+        # Handling the case when arr is not multiple of K
         right = min(initial + K - 1, N - 1)
         while left < right:
+            # Swapping the elements
             arr[left], arr[right] = arr[right], arr[left]
             left += 1
             right -= 1
