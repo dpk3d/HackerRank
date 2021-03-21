@@ -4,7 +4,7 @@ If width of each block is 1, compute how much water can be trapped between the b
 """
 
 
-# Time Complexity O(n), Space Complexity O(n)
+# Time Complexity  = O(n) + O(n) + O(n) Equivalent to O(n), Space Complexity O(n) + O(n)
 def trapping_water(arr):
     size = len(arr)
     left = size * [0]
