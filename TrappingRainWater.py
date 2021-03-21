@@ -40,3 +40,34 @@ def trapping_water(arr):
 array = [3, 0, 0, 2, 0, 4]
 print("Trapped Water is :", trapping_water(array))
 # Trapped Water is : 10
+
+
+
+# Optimal Solution : Time Complexity : O(n), Space Complexity : O(1)
+# Taking Two Pointer Left and Right in same array to achieve space complexity O(1)
+def trapping_water_optimal(arr):
+    size = len(arr)
+    left = 0
+    right = size - 1
+    left_maximum = 0
+    right_maximum = 0
+    trapped_water = 0
+    while left <= right:
+        if arr[left] <= arr[right]:
+            if arr[left] >= left_maximum:
+                left_maximum = arr[left]
+            else:
+                trapped_water += left_maximum - arr[left]
+                left += 1
+        else:
+            if arr[right] >= right_maximum:
+                right_maximum = arr[right]
+            else:
+                trapped_water += right_maximum - arr[right]
+                right -= 1
+    return trapped_water
+
+
+array = [3, 0, 0, 2, 0, 4]
+print("Trapped Water Optimal way is :", trapping_water(array))
+# Trapped Water Optimal way is : 10
