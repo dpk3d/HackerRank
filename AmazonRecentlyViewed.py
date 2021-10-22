@@ -19,7 +19,6 @@ logs = [ "book1", "book2", "book3","book1", "book3" ]
 
 """
 
-
 def recentItems(list):
     dictionary = {}
     for i, item in enumerate(list):
@@ -38,3 +37,4 @@ def recentItems(list):
 logs = ["book1", "book2", "book3", "book1", "book3"]
 print(" The Recently viewed items are", recentItems(logs))
 #  The Recently viewed items are ['book3', 'book1', 'book2']
+# This is not optimal solution, it can be enhanced
